@@ -1,0 +1,28 @@
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual environments
+venv/
+.env
+
+# Docker
+*.env
+*.dockerignore
+*.pid
+*.log
+
+# IDE / Editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# PyCharm
+*.iml
