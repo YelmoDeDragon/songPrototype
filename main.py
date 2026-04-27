@@ -3,8 +3,19 @@ from fastapi import Query
 from pydantic import BaseModel
 from typing import List
 from spotify_agent import SpotifyAgent
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or ["*"] to allow all origins (less secure)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.get("/ping")
 async def ping():
